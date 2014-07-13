@@ -1,6 +1,6 @@
 powerData <- getData()
 png(file="plot2.png")
-plot(powerData$datetime, powerData$global_active_power  
+plot(powerData$datetime, powerData$global_active_power,
      ylab = "Global Active Power (kilowatts)", xlab="", type="l")
 dev.off()
 
