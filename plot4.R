@@ -1,18 +1,18 @@
-par(mfrow = c(2, 2), mar = c(4, 4, 2, 1), oma = c(0, 0, 2, 0))
-
 powerData <- getData()
+
 png(file="plot4.png")
+par(mfrow = c(2, 2), mar = c(4, 4, 2, 1), oma = c(0, 0, 2, 0))
 
 with(powerData, {
 # top left
-	plot(datetime, global_active_power, main="Global Active Power",  
+	plot(datetime, global_active_power,  
 	     ylab = "Global Active Power (kilowatts)", xlab="", type="l")
 
 # top right
 	plot(datetime, Voltage, type="l")
 
 # bottom left
-	plot(datetime, sub_metering_1, main="Global Active Power",
+	plot(datetime, sub_metering_1,
 		     ylab = "Energy sub metering", xlab="", type="l")
 	lines(datetime, sub_metering_2, col="red")
 	lines(datetime, sub_metering_3, col="blue")

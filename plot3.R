@@ -1,6 +1,6 @@
 powerData <- getData()
 png(file="plot3.png")
-with(powerData, plot(datetime, sub_metering_1, main="Global Active Power",
+with(powerData, plot(datetime, sub_metering_1,
 	ylab = "Energy sub metering", xlab="", type="l"))
 with(powerData, lines(datetime, sub_metering_2, col="red"))
 with(powerData, lines(datetime, sub_metering_3, col="blue"))
